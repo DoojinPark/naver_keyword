@@ -26,9 +26,9 @@ def send_slack(msg, channel="#dssf", username="provision_bot" ):
 def find_accuracy(alpha):
 
     # 기사 데이터 프레임 로드
-    article_df = pd.read_csv("article.csv")
-
-    # 테스트 데이터와 트레인 데이터 분리
+    article_df = pd.read_csv("{}/article.csv".format(os.path.dirname(os.path.realpath(__file__))))
+    
+	# 테스트 데이터와 트레인 데이터 분리
     X_train, X_test, y_train, y_test = train_test_split(article_df.content, article_df.category, test_size=0.1, random_state=1)
 
     # vectorizer와 classification algorithm 설정
