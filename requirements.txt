@@ -5,3 +5,5 @@ pandas
 mysqlclient
 sqlalchemy
 pymongo==2.8.1
+scikit-learn
+scipy
